@@ -1,0 +1,35 @@
+<view class="container">
+  <movable-area class="img-area" scale-area="true">
+    <movable-view class="img-view" direction="all" inertia="true" out-of-bounds="true" scale="true" scale-min="1" scale-max="5" animation="true">
+      <image class="camera" mode="aspectFill" src="{{imgSrc}}" data-name="img">
+      </image>
+    </movable-view>
+    <view class="controls" catchtouchmove="">
+      <view class="controls-container" catchtouchmove="">
+        <view class="mask-top" catchtouchmove="">
+        </view>
+        <view class="gap-container" catchtouchmove="">
+          <view class="gap-left" catchtouchmove=""></view>
+          <image class="gap-image" mode="aspectFit" src="/res/gap.png" catchtouchmove=""></image>
+          <view class="gap-right" catchtouchmove=""></view>
+        </view>
+        <view class="mask-bottom" catchtouchmove="">
+          <text class="shooting-requirements">图片要求：清晰完整，避免缺边、模糊、反光。</text>
+          <view class="controls-2" catchtouchmove="">
+            <view class="controls-container-2" catchtouchmove="">
+              <view class="down-container" bindtap="downBack" catchtouchmove="">
+                <image class="down-image" mode="aspectFit" src="/res/down-arrow.png" catchtouchmove=""></image>
+              </view>
+              <view class="takephoto-container" bindtap="takePhoto" catchtouchmove="">
+                <image class="takephoto-image" mode="aspectFit" src="/res/takePhoto.png" catchtouchmove=""></image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </movable-area>
+  <view class="nav-title-container" style="top:{{capsuleHeight}}px;">
+    <text class="nav-title">配料表识别</text>
+  </view>
+</view>

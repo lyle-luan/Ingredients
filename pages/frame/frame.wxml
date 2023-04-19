@@ -1,0 +1,42 @@
+<!--index.wxml-->
+<view class="container">
+  <camera wx:if="{{cameraContext}}" class="camera" mode="normal" resolution="high" device-position="back" flash="{{cameraFlash}}" bindstop="onCameraStop" binderror="onCameraError" bindinitdone="onCameraInitDone" canvas-id="cameraCanvas">
+  </camera>
+  <view class="controls">
+    <view class="controls-container">
+      <view class="mask-top">
+      </view>
+      <view class="gap-container">
+        <view class="gap-left"></view>
+        <image class="gap-image" mode="aspectFit" src="/res/gap.png"></image>
+        <view class="gap-right"></view>
+      </view>
+      <view class="mask-bottom">
+        <text class="shooting-requirements">拍摄要求：清晰完整，避免缺边、模糊、反光。</text>
+        <view class="controls-2">
+          <view class="controls-container-2">
+            <view class="down-container" bindtap="downBack">
+              <image class="down-image" mode="aspectFit" src="/res/down-arrow.png"></image>
+              <!-- <view class="down-overlay" wx:if="{{downTapped}}"></view> -->
+            </view>
+            <view class="takephoto-container" bindtap="takePhoto">
+              <image class="takephoto-image" mode="aspectFit" src="/res/takePhoto.png"></image>
+              <!-- <view class="takephoto-overlay" wx:if="{{takePhotoTapped}}"></view> -->
+            </view>
+            <view class="choosephoto-container" bindtap="choosePhoto">
+              <image class="choosephoto-image" mode="aspectFit" src="/res/img.png"></image>
+              <!-- <view class="choosephoto-overlay" wx:if="{{choosePhotoTapped}}"></view> -->
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="flash-container" bindtap="changeFlash">
+    <image class="flash-image" mode="aspectFit" src="{{flashImgSrc}}"></image>
+    <!-- <view class="flash-overlay" wx:if="{{flashTapped}}"></view> -->
+  </view>
+  <view class="nav-title-container" style="top:{{capsuleHeight}}px;">
+    <text class="nav-title">配料表识别</text>
+  </view>
+</view>

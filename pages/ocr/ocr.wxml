@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="container3">
+    <view class="img-container">
+      <image class="ingredient-img" mode="aspectFill" src="{{ingredientImgPath}}"></image>
+    </view>
+  </view>
+  <view class="container2">
+    <view class="gap-container">
+      <view class="gap-left"></view>
+      <image class="gap-image" mode="aspectFit" src="/res/gap.png"></image>
+      <view class="gap-right"></view>
+    </view>
+  </view>
+  <text class="conclusion-text">{{conclusion}}</text>
+  <view class="back-container" bindtap="naviBack" style="top:{{capsuleHeight + (32 - 26) / 2}}px;">
+    <image class="back-image" mode="aspectFit" src="/res/back.png"></image>
+  </view>
+  <view class="nav-title-container" style="top:{{capsuleHeight}}px;">
+    <text class="nav-title">健康建议</text>
+  </view>
+</view>

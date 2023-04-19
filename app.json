@@ -1,0 +1,14 @@
+{
+  "pages":[
+    "pages/frame/frame",
+    "pages/ocr/ocr",
+    "pages/crop/crop"
+  ],
+  "window":{
+    "backgroundColor": "#ffffff",
+    "navigationStyle": "custom"
+  },
+  "style": "v2",
+  "lazyCodeLoading": "requiredComponents",
+  "sitemapLocation": "sitemap.json"
+}
