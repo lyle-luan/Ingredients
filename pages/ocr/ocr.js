@@ -42,7 +42,7 @@ Page({
       data: {
         uid: uid
       },
-      timeout: 1500,
+      timeout: 1000 * 6,
       method: 'POST',
       success: (res) => {
         wx.hideLoading()
@@ -75,7 +75,7 @@ Page({
         }
       },
       fail: (res) => {
-        console.error('usage fail: ' + res);
+        console.error('usage fail: ' + JSON.stringify(res));
         wx.hideLoading()
         usageFailed(res)
       }
